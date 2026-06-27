@@ -1,33 +1,55 @@
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+import { Fraunces, Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Alabi Oluwasegun Akeem — Product-Focused Software Engineer",
+  title: "Segun Alabi — Founder of Tiwaton & Product-Focused Software Engineer",
   description:
-    "Product-focused software engineer with deep QA/automation expertise. I build end-to-end solutions by identifying gaps and shipping reliable products.",
-  metadataBase: new URL("https://segunalabi.com"),
+    "Founder of Tiwaton and product-focused software engineer building practical AI-powered products across worship, media, enterprise and finance.",
+  metadataBase: new URL("https://segunalabi.co.uk"),
   openGraph: {
-    title: "Alabi Oluwasegun Akeem — Product-Focused Software Engineer",
+    title: "Segun Alabi — Founder of Tiwaton",
     description:
-      "Showcasing a portfolio of product-driven engineering solutions with a focus on reliability, automation and thoughtful design.",
+      "Product-focused software engineer building practical AI-powered tools, starting with Lumina Presenter.",
     type: "website",
-    url: "https://segunalabi.com",
+    url: "https://segunalabi.co.uk",
     images: [
       {
-        url: "/projects/aether-studio.png",
+        url: "https://luminalive.co.uk/og/lumina-home.png",
         width: 1200,
         height: 630,
-        alt: "Segunalabi hero image",
+        alt: "Lumina Presenter church presentation software",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Segun Alabi — Founder of Tiwaton",
+    description:
+      "Building practical AI-powered products across worship, media, enterprise and finance.",
+    images: ["https://luminalive.co.uk/og/lumina-home.png"],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-black text-white antialiased">
+      <body
+        className={`${inter.variable} ${fraunces.variable} min-h-screen bg-paper font-sans text-ink antialiased`}
+      >
         <SiteHeader />
         <main>{children}</main>
         <Footer />

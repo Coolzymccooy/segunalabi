@@ -8,12 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        serif: ['var(--font-fraunces)', 'Georgia', 'serif'],
       },
       colors: {
-        primary: {
-          DEFAULT: '#38bdf8',
-        },
+        paper: '#f7f7f5',
+        ink: '#141512',
+        gold: '#aa791d',
+        'gold-dark': '#7d5714',
       },
     },
   },

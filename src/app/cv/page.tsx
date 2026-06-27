@@ -1,33 +1,28 @@
-import Container from "@/components/Container";
 import Link from "next/link";
+import ArrowIcon from "@/components/ArrowIcon";
+import Container from "@/components/Container";
 
-const CV_PATH = "/cv/alabi-oluwasegun-akeem-cv.pdf";
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function CVPage() {
   return (
-    <section className="py-14">
+    <section className="py-12 lg:py-16">
       <Container>
-        <h1 className="text-3xl font-semibold">Curriculum Vitae</h1>
-        <p className="mt-2 text-white/70">
-          View in‑browser or download. References available on request.
+        <h1 className="max-w-2xl font-serif text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[0.98] tracking-[-0.045em]">
+          Professional profile
+        </h1>
+        <p className="mt-4 max-w-xl text-base leading-7 text-ink/65">
+          Detailed employment history and a current CV are available privately on request.
         </p>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href={CV_PATH}
-            className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:opacity-90"
-          >
-            Download CV (PDF)
-          </Link>
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-          <iframe
-            src={CV_PATH}
-            className="h-[75vh] w-full"
-            title="CV"
-          />
-        </div>
+        <Link href="/contact" className="button-primary mt-6 inline-flex">
+          Request details
+          <ArrowIcon className="h-4 w-4" />
+        </Link>
       </Container>
     </section>
   );

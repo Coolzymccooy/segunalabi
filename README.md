@@ -1,6 +1,6 @@
 # Segunalabi Portfolio
 
-This repository contains the source code for **segunalabi.com**, a dark, premium portfolio showcasing the work of Alabi Oluwasegun Akeem. It’s built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and the app directory architecture.
+This repository contains the source code for **segunalabi.co.uk**, a product-focused portfolio for Segun Alabi. It’s built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and the app directory architecture.
 
 ## Running locally
 

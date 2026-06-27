@@ -44,25 +44,28 @@ export const projects: Project[] = [
   {
     slug: "lumina-presenter",
     name: "Lumina Presenter",
-    tagline: "Modern worship & event presentation (EasyWorship alternative)",
+    tagline: "Church presentation software for calm, coordinated live services",
     status: "Live",
     image: "/projects/lumina-presenter.png",
     tags: ["Presentation", "Church", "UX"],
     gap:
-      "Presentation tools in worship/live environments often feel dated, rigid, and slow to operate under pressure.",
+      "Church media teams often plan services across disconnected tools, then operate dated presentation software under live pressure.",
     solution:
-      "A modern presenter experience designed for speed, clarity, and smooth live operation.",
+      "Lumina brings service run sheets, lyrics, scripture, media, stage display and team control into one modern workflow for web, Windows and macOS.",
     capabilities: [
-      "Fast navigation for live services",
-      "Cleaner modern UI",
-      "Built for worship/event workflows",
+      "Lyrics, Bible slides, hymns and sermon media",
+      "Motion backgrounds and audience output",
+      "Stage display and confidence monitoring",
+      "Remote control and team workflows",
+      "Web planning with Windows and macOS presentation",
     ],
     architecture: [
-      "Presentation library",
-      "Cue/queue system",
-      "Output views (projector/stage)",
+      "Service planning and run-sheet layer",
+      "Presentation library and live cue system",
+      "Audience, stage and confidence outputs",
+      "Desktop presentation with web-based planning",
     ],
-    links: {},
+    links: { live: "https://luminalive.co.uk" },
   },
   {
     slug: "payflow",
@@ -203,13 +206,183 @@ export const projects: Project[] = [
     architecture: ["Studio UI", "Audio processing/routing", "Broadcast output"],
     links: {},
   },
+  {
+    slug: "scribeai",
+    name: "ScribeAI",
+    tagline: "Offline-first AI meeting & sermon transcription assistant",
+    status: "Live",
+    image: "/projects/scribeai.png",
+    tags: ["AI", "Transcription", "Productivity"],
+    gap:
+      "Meeting and sermon recordings sit unprocessed for weeks because transcription tools are slow, cloud-dependent, and miss accents.",
+    solution:
+      "An offline-first assistant that captures audio, transcribes with strong accent handling, summarises key points, and exports action items — all without needing a live internet connection.",
+    capabilities: [
+      "High-accuracy transcription with accent support",
+      "Automatic summarisation + action-item extraction",
+      "Auto-deliverables pack: minutes, decisions, follow-up email",
+      "Battery-aware capture mode for mobile",
+      "Studio Live broadcast mode",
+    ],
+    architecture: [
+      "React frontend + Node.js/Express backend",
+      "Offline-first audio capture pipeline",
+      "AI processing layer (transcription → summarisation)",
+      "Export engine (PDF, CSV, email)",
+    ],
+    links: {},
+  },
+  {
+    slug: "rotaai",
+    name: "RotaAI",
+    tagline: "AI-powered medical rostering for NHS-style hospital environments",
+    status: "Live",
+    image: "/projects/rotaai.png",
+    tags: ["AI", "Healthcare", "Automation"],
+    gap:
+      "NHS-style hospital rostering is done in spreadsheets or rigid legacy tools that can't adapt to dynamic staffing constraints or compliance rules.",
+    solution:
+      "An AI-driven rostering engine that generates optimised, constraint-aware rotas for medical teams — reducing manual effort and scheduling conflicts.",
+    capabilities: [
+      "AI-generated rota optimisation",
+      "NHS compliance rule enforcement",
+      "Staff availability + preference handling",
+      "Real-time conflict detection",
+      "Dashboard + export for coordinators",
+    ],
+    architecture: [
+      "React UI + Prisma/PostgreSQL backend",
+      "AI constraint-solver (Gemini 2.5 Flash)",
+      "Rostering rule engine",
+      "REST API + notification layer",
+    ],
+    links: {},
+  },
+  {
+    slug: "connectai",
+    name: "ConnectAI",
+    tagline: "B2B SaaS AI-powered contact centre platform",
+    status: "Live",
+    image: "/projects/connectai.png",
+    tags: ["AI", "SaaS", "Contact Centre"],
+    gap:
+      "Contact centres rely on fragmented tooling for calls, chat, and CRM — agents switch contexts constantly, and AI capabilities are bolted on rather than built in.",
+    solution:
+      "A unified B2B contact centre platform with AI-native workflows: real-time call intelligence, collaboration tools, and tenant-isolated multi-channel management.",
+    capabilities: [
+      "Real-time AI call intelligence (Gemini 2.5 Flash)",
+      "LiveKit-powered SFU voice calls",
+      "Multi-channel: voice, chat, Firestore collab",
+      "Tenant-isolated multi-org architecture",
+      "AI copilot with route-keyed deduplication",
+    ],
+    architecture: [
+      "React + Vite frontend",
+      "Node.js/Express multi-tenant backend",
+      "LiveKit SFU for real-time calls",
+      "Firebase Firestore for collab/chat",
+    ],
+    links: {},
+  },
+  {
+    slug: "omnigen",
+    name: "OmniGen",
+    tagline: "Universal AI orchestrator for multi-modal content generation",
+    status: "Live",
+    image: "/projects/omnigen.png",
+    tags: ["AI", "Multi-modal", "Generation"],
+    gap:
+      "Creators working with text, image, video, and voice generation have to juggle multiple AI tools and APIs, with no unified workflow or consistent UX.",
+    solution:
+      "A single console that intelligently routes generation requests to the best Gemini and Veo models — text, image, video, and speech — through one interface.",
+    capabilities: [
+      "Intelligent model routing (text / image / video / speech)",
+      "Google Gemini + Veo model integration",
+      "PWA — installable on mobile and desktop",
+      "API key proxying for client-safe usage",
+      "Multi-modal in one session",
+    ],
+    architecture: [
+      "React frontend (PWA-enabled)",
+      "Express backend proxy for Gemini/Veo",
+      "Multi-modal routing engine",
+      "REST API layer",
+    ],
+    links: {},
+  },
+  {
+    slug: "biblefuel-studio",
+    name: "BibleFuel Studio",
+    tagline: "Bible study and content creation workspace for teachers and preachers",
+    status: "Live",
+    image: "/projects/biblefuel-studio.png",
+    tags: ["Bible", "Content", "Church"],
+    gap:
+      "Bible teachers and preachers lack a unified workspace to research, structure, and create sermon or study content without switching between multiple tools.",
+    solution:
+      "A focused studio that combines Bible reference lookup, note-taking, and content assembly into a single streamlined workflow purpose-built for ministry.",
+    capabilities: [
+      "Bible reference lookup and cross-referencing",
+      "Study note and outline creation",
+      "Content structuring for sermons and devotionals",
+      "Export-ready output (PDF, text, share)",
+    ],
+    architecture: ["Bible data layer", "Rich-text editor/workspace", "Content pipeline", "Export module"],
+    links: {},
+  },
+  {
+    slug: "famhub",
+    name: "FamHub",
+    tagline: "Family coordination and shared-life management platform",
+    status: "Live",
+    image: "/projects/famhub.png",
+    tags: ["Family", "Coordination", "Mobile"],
+    gap:
+      "Families rely on scattered group chats, separate calendars, and multiple apps to coordinate daily life — there is no single trusted hub built around family context.",
+    solution:
+      "A family-first platform that unifies scheduling, shared tasks, memories, and communication into one trusted space.",
+    capabilities: [
+      "Shared family calendar and task lists",
+      "Family memory and moments board",
+      "Smart reminders for family events",
+      "Role-aware member profiles (parents/kids)",
+    ],
+    architecture: ["Family identity layer", "Shared real-time data model", "Mobile-first UI", "Notification system"],
+    links: {},
+  },
+  {
+    slug: "agege-market-pay",
+    name: "Agege Market Pay",
+    tagline: "Regulation-safe PWA for digitising market levy collections",
+    status: "Live",
+    image: "/projects/agege-market-pay.png",
+    tags: ["Fintech", "PWA", "Civic Tech"],
+    gap:
+      "Market levy collection in informal economies is manual, paper-based, and opaque — leading to revenue leakage, disputes, and no audit trail for traders or authorities.",
+    solution:
+      "A installable PWA that digitises levy billing and collections: real-time authority dashboards, digital receipts for traders, and camera-based verification.",
+    capabilities: [
+      "Installable PWA (no app store needed)",
+      "Real-time collection dashboard for authorities",
+      "Digital receipts with camera verification",
+      "Regulation-safe audit trail",
+      "Offline-resilient for low-connectivity markets",
+    ],
+    architecture: [
+      "React PWA frontend (camera permissions)",
+      "Gemini AI for receipt parsing / verification",
+      "REST API layer",
+      "Local-first storage with sync",
+    ],
+    links: {},
+  },
 ];
 
 export const featuredSlugs = [
-  "aether-studio",
+  "connectai",
+  "rotaai",
+  "scribeai",
+  "omnigen",
   "lumina-presenter",
-  "propscout-investment-engine",
-  "appointment-hunter-ai",
-  "shiftcare",
-  "tiwaton-ai-studio",
+  "agege-market-pay",
 ];
