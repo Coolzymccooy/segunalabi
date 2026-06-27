@@ -20,6 +20,9 @@ export const metadata = {
   description:
     "Founder of Tiwaton and product-focused software engineer building practical AI-powered products across worship, media, enterprise and finance.",
   metadataBase: new URL("https://segunalabi.co.uk"),
+  verification: {
+    google: "uq_c1G77a6QiQH47sNYSBfPsezyuC1aXENFOExZ5QBc",
+  },
   openGraph: {
     title: "Segun Alabi — Founder of Tiwaton",
     description:
