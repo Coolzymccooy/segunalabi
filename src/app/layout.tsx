@@ -16,17 +16,17 @@ const fraunces = Fraunces({
 });
 
 export const metadata = {
-  title: "Segun Alabi — Founder of Tiwaton & Product-Focused Software Engineer",
+  title: "Tiwaton Product Studio — Lumina Presenter, Church Presentation Software",
   description:
-    "Founder of Tiwaton and product-focused software engineer building practical AI-powered products across worship, media, enterprise and finance.",
+    "Product studio behind Lumina Presenter, church presentation software for live services, worship teams, Bible slides, lyrics, stage display and AI-assisted service planning.",
   metadataBase: new URL("https://segunalabi.co.uk"),
   verification: {
     google: "uq_c1G77a6QiQH47sNYSBfPsezyuC1aXENFOExZ5QBc",
   },
   openGraph: {
-    title: "Segun Alabi — Founder of Tiwaton",
+    title: "Tiwaton Product Studio — Lumina Presenter",
     description:
-      "Product-focused software engineer building practical AI-powered tools, starting with Lumina Presenter.",
+      "Explore Lumina Presenter, church presentation software for live services, plus practical AI-powered products for worship, media and enterprise teams.",
     type: "website",
     url: "https://segunalabi.co.uk",
     images: [
@@ -40,9 +40,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Segun Alabi — Founder of Tiwaton",
+    title: "Tiwaton Product Studio — Lumina Presenter",
     description:
-      "Building practical AI-powered products across worship, media, enterprise and finance.",
+      "Church presentation software and practical AI-powered products for worship, media and enterprise teams.",
     images: ["https://luminalive.co.uk/og/lumina-home.png"],
   },
 };

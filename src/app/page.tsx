@@ -30,15 +30,30 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Segun Alabi",
-            url: "https://segunalabi.co.uk",
-            jobTitle: "Founder",
-            worksFor: {
-              "@type": "Organization",
-              name: "Tiwaton Ltd",
-              url: "https://tiwaton.co.uk",
-            },
+            "@graph": [
+              {
+                "@type": "Organization",
+                name: "Tiwaton Ltd",
+                url: "https://segunalabi.co.uk",
+                sameAs: ["https://tiwaton.co.uk", "https://luminalive.co.uk"],
+              },
+              {
+                "@type": "SoftwareApplication",
+                name: "Lumina Presenter",
+                applicationCategory: "Church presentation software",
+                operatingSystem: "Windows, macOS, Web",
+                url: "https://luminalive.co.uk",
+                description:
+                  "Church presentation software for live services, Bible slides, worship lyrics, hymns, stage display, livestream graphics and AI-assisted service planning.",
+                image: "https://luminalive.co.uk/og/lumina-home.png",
+              },
+              {
+                "@type": "WebSite",
+                name: "Tiwaton Product Studio",
+                url: "https://segunalabi.co.uk",
+                about: { "@type": "SoftwareApplication", name: "Lumina Presenter", url: "https://luminalive.co.uk" },
+              },
+            ],
           }),
         }}
       />
@@ -48,11 +63,10 @@ export default function HomePage() {
           <div className="grid min-h-[440px] items-center gap-8 py-8 md:grid-cols-[0.82fr_1.18fr]">
             <div className="hero-enter">
               <h1 className="max-w-[680px] font-serif text-[clamp(2.75rem,4.8vw,5.5rem)] font-medium leading-[0.96] tracking-[-0.05em]">
-                I build practical software for real work.
+                Practical software for real work.
               </h1>
               <p className="mt-4 max-w-[620px] text-base leading-7 text-ink/70 sm:text-lg">
-                Founder of Tiwaton. Product-focused software engineer building AI-powered tools
-                across worship, media, enterprise and finance.
+                A product studio building AI-powered tools across worship, media, enterprise and finance — starting with Lumina Presenter for live church services.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
@@ -84,7 +98,7 @@ export default function HomePage() {
                   />
                   <circle cx="10" cy="8" r="1.7" stroke="currentColor" strokeWidth="1.3" />
                 </svg>
-                United Kingdom · Founder, Tiwaton Ltd
+                United Kingdom · Tiwaton product studio
               </div>
             </div>
 
@@ -231,8 +245,8 @@ export default function HomePage() {
                 From product gap to reliable software.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-7 text-ink/65">
-                I work across product thinking, engineering and quality — shaping the
-                workflow, building the system and validating the edge cases before users
+                The studio works across product thinking, engineering and quality — shaping the
+                workflow, building the system and validating edge cases before users
                 find them.
               </p>
             </div>

@@ -8,7 +8,7 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <Link href="/" className="font-serif text-2xl font-semibold tracking-tight">
-            Segun Alabi
+            Tiwaton Products
           </Link>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink/65" aria-label="Footer navigation">
             <a href="https://tiwaton.co.uk" target="_blank" rel="noreferrer">Tiwaton</a>

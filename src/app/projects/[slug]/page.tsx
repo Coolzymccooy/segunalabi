@@ -13,10 +13,14 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   if (!project) return notFound();
 
   const links = [
-    ["live", "View live"],
+    ["live", "View Lumina"],
+    ["churchPresentation", "Church presentation software"],
+    ["biblePresentation", "Bible presentation software"],
+    ["foundingChurches", "Founding churches"],
     ["github", "View code"],
     ["demo", "View demo"],
   ] as const;
+  const isLumina = project.slug === "lumina-presenter";
 
   return (
     <div>
@@ -50,7 +54,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     href={project.links[key]}
                     target="_blank"
                     rel="noreferrer"
-                    className="button-primary inline-flex"
+                    className={key === "live" ? "button-primary inline-flex" : "button-secondary inline-flex"}
                   >
                     {label}
                     <ArrowIcon external className="h-4 w-4" />
@@ -59,6 +63,36 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               )}
             </div>
           )}
+
+          {isLumina && (
+            <div className="mt-8 rounded-[6px] border border-gold/35 bg-white/55 p-5">
+              <p className="text-sm uppercase tracking-[0.16em] text-gold">Product link map</p>
+              <h2 className="mt-2 font-serif text-2xl tracking-[-0.03em]">
+                Lumina Presenter is the church presentation software layer for live services.
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-ink/68">
+                The live product pages below explain Lumina’s workflow for worship lyrics, Bible
+                slides, hymns, service run sheets, stage display, livestream graphics and AI-assisted
+                preparation. These are the best pages to share with pastors, worship leaders and
+                church media teams.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a href="https://luminalive.co.uk/church-presentation-software" target="_blank" rel="noreferrer" className="button-secondary inline-flex">
+                  Church presentation software
+                  <ArrowIcon external className="h-4 w-4" />
+                </a>
+                <a href="https://luminalive.co.uk/bible-presentation-software" target="_blank" rel="noreferrer" className="button-secondary inline-flex">
+                  Bible presentation software
+                  <ArrowIcon external className="h-4 w-4" />
+                </a>
+                <a href="https://luminalive.co.uk/founding-churches" target="_blank" rel="noreferrer" className="button-primary inline-flex">
+                  Founding churches
+                  <ArrowIcon external className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          )}
+
         </Container>
       </section>
 

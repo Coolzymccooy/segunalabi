@@ -13,6 +13,9 @@ export type Project = {
     live?: string;
     github?: string;
     demo?: string;
+    churchPresentation?: string;
+    biblePresentation?: string;
+    foundingChurches?: string;
   };
 };
 
@@ -65,7 +68,12 @@ export const projects: Project[] = [
       "Audience, stage and confidence outputs",
       "Desktop presentation with web-based planning",
     ],
-    links: { live: "https://luminalive.co.uk" },
+    links: {
+      live: "https://luminalive.co.uk",
+      churchPresentation: "https://luminalive.co.uk/church-presentation-software",
+      biblePresentation: "https://luminalive.co.uk/bible-presentation-software",
+      foundingChurches: "https://luminalive.co.uk/founding-churches",
+    },
   },
   {
     slug: "payflow",

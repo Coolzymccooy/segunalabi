@@ -20,13 +20,13 @@ export default function SiteHeader() {
             href="/"
             className="font-serif text-[1.4rem] font-semibold tracking-[-0.03em] text-ink"
           >
-            Segun Alabi
+            Tiwaton Products
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
             <NavLink href="/#products" label="Products" />
-            <NavLink href="/#about" label="About" />
-            <NavLink href="/#experience" label="Experience" />
+            <NavLink href="/#about" label="Method" />
+            <NavLink href="/#experience" label="Reliability" />
             <NavLink href="/#contact" label="Contact" />
           </nav>
 
@@ -54,8 +54,8 @@ export default function SiteHeader() {
               >
                 <div className="flex flex-col gap-3">
                   <NavLink href="/#products" label="Products" />
-                  <NavLink href="/#about" label="About" />
-                  <NavLink href="/#experience" label="Experience" />
+                  <NavLink href="/#about" label="Method" />
+                  <NavLink href="/#experience" label="Reliability" />
                   <NavLink href="/#contact" label="Contact" />
                   <a
                     href="https://luminalive.co.uk"
